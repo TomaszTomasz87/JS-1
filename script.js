@@ -4,14 +4,21 @@ const square = document.querySelector('.color')
 const removeColorBtn = document.querySelector('.remove-color')
 
 function redColor() {
-    square.classList.add('red')
-    square.classList.remove('blue')
+	square.classList.add('red')
+	square.classList.remove('blue')
 }
 
 function blueColor() {
-    square.classList.add('blue')
-    square.classList.remove('red')
+	square.classList.add('blue')
+	square.classList.remove('red')
 }
-redBtn.addEventListener('click', redColor)
 
+
+function deleteColor() {
+	square.classList.remove('red')
+	square.classList.remove('blue')
+}
+
+redBtn.addEventListener('click', redColor)
 blueBtn.addEventListener('click', blueColor)
+removeColorBtn.addEventListener('click', deleteColor)
